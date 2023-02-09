@@ -23,3 +23,22 @@ btnSi.addEventListener('click', function(e){
     const cancion = new Audio('video/DingDong.mp3')
     cancion.play()
 });
+
+botones = document.getElementsByTagName("button")
+console.log(botones)
+
+divModoSexo.addEventListener('click', function (e)  {
+    // innerHTML cambia todo el html dentro del divModoSexo
+    
+    //divModoSexo.innerHTML = " <img src='video/perro.jpg'>";
+    // cosa muy diferente al comportamiento del appendChild
+    //query se usa para buscar uno o varios elementos
+    const img = document.createElement("img");
+    img.src = "video/perro.jpg";
+    divModoSexo.appendChild(img);
+})
+
+window.addEventListener('beforeunload' , (event) => {
+    event.preventDefault();
+    event.returnValue = "";
+})
